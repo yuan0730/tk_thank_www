@@ -3,11 +3,11 @@
 
 // Tree configuration
 var branches = [];
-var seed = {i: 0, x: 420, y: 600, a: 0, l: 130, d:0}; // a = angle, l = length, d = depth
+var seed = {i: 0, x: 200, y: 400, a: 0, l: 60, d:0}; // a = angle, l = length, d = depth
 var da = 0.5; // Angle delta
 var dl = 0.8; // Length delta (factor)
-var ar = 0.7; // Randomness
-var maxDepth = 10;
+var ar = 0.8; // Randomness
+var maxDepth = 8;
 
 
 // Tree creation functions
@@ -105,4 +105,4 @@ d3.selectAll('.regenerate')
 	.on('click', regenerate);
 
 regenerate(true);
-
+setInterval(regenerate,3000);
